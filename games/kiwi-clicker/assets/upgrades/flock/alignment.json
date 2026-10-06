@@ -1,0 +1,63 @@
+{
+  "canvas": [
+    1800,
+    500
+  ],
+  "layout": "one horizontal row; three kiwis, exactly one button per kiwi",
+  "placements": [
+    {
+      "x": 15,
+      "y": 10,
+      "scale": 0.31,
+      "phaseMs": 0,
+      "kiwiSource": "../../kiwi-idle.png",
+      "buttonScenePlacement": {
+        "x": 1184.24,
+        "y": 630,
+        "scale": 0.32
+      },
+      "motionModule": "../../../kiwi-motion.js",
+      "motionAmountRange": [
+        0,
+        1
+      ]
+    },
+    {
+      "x": 610,
+      "y": 10,
+      "scale": 0.31,
+      "phaseMs": 220,
+      "kiwiSource": "../../kiwi-idle.png",
+      "buttonScenePlacement": {
+        "x": 1184.24,
+        "y": 630,
+        "scale": 0.32
+      },
+      "motionModule": "../../../kiwi-motion.js",
+      "motionAmountRange": [
+        0,
+        1
+      ]
+    },
+    {
+      "x": 1205,
+      "y": 10,
+      "scale": 0.31,
+      "phaseMs": 440,
+      "kiwiSource": "../../kiwi-idle.png",
+      "buttonScenePlacement": {
+        "x": 1184.24,
+        "y": 630,
+        "scale": 0.32
+      },
+      "motionModule": "../../../kiwi-motion.js",
+      "motionAmountRange": [
+        0,
+        1
+      ]
+    }
+  ],
+  "idleFallback": "flock-idle.png",
+  "sourceRGBA": "../../kiwi-idle.png",
+  "notes": "Reuse approved PNG and current mesh for each bird; do not regenerate. All feet on same baseline. SVG fallback references sibling source assets; inline or retain relative paths."
+}

@@ -1,0 +1,45 @@
+{
+  "canvas": {
+    "width": 1536,
+    "height": 1024
+  },
+  "scene": {
+    "width": 1800,
+    "height": 1100
+  },
+  "placement": {
+    "x": 1184.24,
+    "y": 630,
+    "scale": 0.32
+  },
+  "contactLandmark": {
+    "assetX": 768,
+    "assetY": 250,
+    "sceneX": 1430,
+    "sceneY": 710
+  },
+  "travel": {
+    "scenePx": 20,
+    "assetPx": 62.5,
+    "direction": "down"
+  },
+  "layerOrder": [
+    "button-housing.png",
+    "button-cap-plunger.png",
+    "button-housing.png clipped to stationary foreground y >= 580"
+  ],
+  "foregroundOcclusion": {
+    "source": "button-housing.png",
+    "clipRect": {
+      "x": 0,
+      "y": 580,
+      "width": 1536,
+      "height": 444
+    },
+    "moves": false
+  },
+  "fallback": "button-idle.png",
+  "pressedCapNeeded": false,
+  "background": "transparent",
+  "groundShadow": false
+}

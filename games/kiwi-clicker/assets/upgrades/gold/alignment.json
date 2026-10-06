@@ -1,0 +1,28 @@
+{
+  "canvas": [
+    1536,
+    1024
+  ],
+  "layerOrder": [
+    "approved kiwi",
+    "sleeve-aligned.svg"
+  ],
+  "sleeveMatrix": "matrix(0.9126764 -0.0263979 0.0263979 0.9126764 116.1469023 87.7668986)",
+  "billBase": [
+    1152,
+    404
+  ],
+  "billSleeveTip": [
+    1456,
+    619
+  ],
+  "neckPivot": [
+    900,
+    450
+  ],
+  "motion": "Apply exact SAME deformation as kiwi mesh; overlay sleeve into shared texture or use identical mesh. Do not separately rotate sleeve.",
+  "fallback": "idle.svg",
+  "occlusion": "sleeve-aligned.svg clips to original bill silhouette; face untouched.",
+  "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
+  "registeredFallback": "idle.png"
+}

@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Kiwi button asset preview</title><style>body{margin:24px;background:#f8f6ec;color:#34463b;font:16px system-ui}h1{font-size:24px}main{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0}figcaption{font-weight:650;margin-top:8px}.frame{background:#e5edd4;border-radius:16px;overflow:hidden}.frame svg{display:block;width:100%}canvas{width:1536px;height:1024px;display:block}.kiwi-deformed{display:none}.motion-ready .kiwi-deformed{display:block}.motion-ready .fallback{display:none}</style><h1>Coral peck button · rest and pressed</h1><main id="gallery"></main><script type="module">
+import {createKiwiMotion} from '../../kiwi-motion.js';
+const gallery=document.getElementById('gallery');
+for(const [name,pressed,withKiwi] of [['Button at rest',false,false],['Button depressed · 20 px travel',true,false],['Kiwi and button at rest',false,true],['Beak contact · full press',true,true]]){
+const figure=document.createElement('figure');const id='front'+gallery.children.length;const travel=pressed?62.5:0;
+const artwork=`<defs><clipPath id="${id}"><rect x="0" y="580" width="1536" height="444"/></clipPath></defs><g ${withKiwi?'transform="translate(1184.24 630) scale(.32)"':''}><image href="button-housing.png" width="1536" height="1024"/><image href="button-cap-plunger.png" width="1536" height="1024" transform="translate(0 ${travel})"/><image href="button-housing.png" width="1536" height="1024" clip-path="url(#${id})"/></g>`;
+figure.innerHTML=`<div class="frame"><svg viewBox="${withKiwi?'0 0 1800 1100':'0 0 1536 1024'}">${artwork}${withKiwi?'<image class="fallback" href="../kiwi-idle.png" width="1536" height="1024"/><foreignObject class="kiwi-deformed" width="1536" height="1024"><canvas width="1536" height="1024"></canvas></foreignObject>':''}</svg></div><figcaption>${name}</figcaption>`;
+gallery.append(figure);if(withKiwi){const draw=createKiwiMotion(figure.querySelector('canvas'));draw?.(pressed?1:0);}
+}
+</script></html>

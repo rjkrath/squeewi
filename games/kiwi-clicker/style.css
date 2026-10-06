@@ -1,0 +1,30 @@
+/* Game-specific illustration: all moving parts share one coordinate system. */
+.kiwi-scene{display:block;width:100%;max-width:480px;margin:8px auto 18px;padding:0 0 12px;border:0;border-radius:24px;background:transparent;color:#874831;cursor:pointer;touch-action:manipulation}
+.kiwi-scene svg{display:block;width:100%;overflow:visible}
+.scene-caption{display:inline-block;font-size:15px;font-weight:800;letter-spacing:.3px;padding:9px 20px;background:#fff7dd;border:1px solid #b59b6c40;border-radius:30px}
+.kiwi-scene:hover .scene-caption{background:#ffeac5}
+.kiwi-deformed{display:none;pointer-events:none}
+#kiwi-canvas{display:block;width:1536px;height:1024px}
+.kiwi-fallback{display:block}
+.motion-ready .kiwi-deformed{display:block}
+.motion-ready .kiwi-fallback{display:none}
+
+
+[hidden]{display:none!important}
+.workplace{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0;text-align:center}
+.workplace-card{flex:1 1 110px;min-width:0;padding:10px 6px;background:#f7f5e7;border:1px solid #b6c19d60;border-radius:16px}
+.workplace-card svg{width:100%;display:block;height:90px}
+.workplace-card b{display:block;font-size:11px}.workplace-card small{display:block;font-size:10px;color:#6c765e;margin-top:5px}
+
+.factory-windows{animation:factory-glow 2s ease-in-out infinite}
+.factory-puff{animation:factory-puff 2s ease-out infinite}
+
+@keyframes factory-glow{50%{opacity:.55}}
+@keyframes factory-puff{0%{opacity:0;transform:translateY(8px)}30%{opacity:.7}100%{opacity:0;transform:translateY(-20px)}}
+@media(prefers-reduced-motion:reduce){.workplace *{animation:none!important}}
+
+#intern-canvas{display:block;width:1536px;height:1024px}
+
+.extra-tools{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:14px}.tool-badge{font-size:11px;padding:7px 10px;border-radius:12px;background:#f7f5e7;border:1px solid #b6c19d60}
+
+.worm-farm{margin-top:12px;padding:12px;border-radius:14px;background:#d9dfbe;border-bottom:10px solid #8c7052;text-align:center}.worm-farm>b,.worm-farm>small{display:block;font-size:11px;margin-top:5px}.worm-farm>span{letter-spacing:8px;font-size:20px}

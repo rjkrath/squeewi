@@ -1,0 +1,72 @@
+{
+  "canvas": [
+    1800,
+    1100
+  ],
+  "sourcePNGs": [
+    1536,
+    1024
+  ],
+  "outerTranslation": [
+    100,
+    0
+  ],
+  "layerOrder": [
+    "button",
+    "body",
+    "key",
+    "arm"
+  ],
+  "bodyTransform": "identity",
+  "keyTransform": "translate(-103 80) scale(.65)",
+  "armTransform": "translate(331.5 13.25) scale(.75)",
+  "shoulderPivot": [
+    837,
+    293
+  ],
+  "sourceArmPivot": [
+    674,
+    373
+  ],
+  "sourceElbow": [
+    1030,
+    227
+  ],
+  "armRotationDegrees": [
+    0,
+    5.5
+  ],
+  "padTipIdle": [
+    1306.5,
+    504
+  ],
+  "buttonContact": [
+    1307,
+    540
+  ],
+  "buttonPlacement": [
+    846.2,
+    390,
+    0.6
+  ],
+  "buttonTravelPx": [
+    0,
+    10
+  ],
+  "keyPivot": [
+    235,
+    398
+  ],
+  "fallback": "assembled-idle.svg",
+  "conceptFallback": "idle.png",
+  "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
+  "registeredShoulderPivot": [
+    937,
+    293
+  ],
+  "registeredKeyPivot": [
+    335,
+    398
+  ],
+  "registeredFallback": "assembled-idle.png"
+}

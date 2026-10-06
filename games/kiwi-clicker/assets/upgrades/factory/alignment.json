@@ -1,0 +1,71 @@
+{
+  "canvas": [
+    1536,
+    1024
+  ],
+  "layerOrder": [
+    "presses",
+    "frame",
+    "buttons"
+  ],
+  "pressesTransform": "translate(0 20)",
+  "pressCenters": [
+    499,
+    789,
+    1111
+  ],
+  "pressClipColumns": [
+    [
+      400,
+      300,
+      200,
+      250
+    ],
+    [
+      690,
+      300,
+      200,
+      250
+    ],
+    [
+      1000,
+      300,
+      220,
+      260
+    ]
+  ],
+  "pressTravelPx": [
+    0,
+    51
+  ],
+  "buttonContacts": [
+    [
+      499,
+      516
+    ],
+    [
+      789,
+      533
+    ],
+    [
+      1111,
+      550
+    ]
+  ],
+  "buttonScale": 0.14,
+  "buttonTravelPx": [
+    0,
+    6
+  ],
+  "timing": "Approach first ~42px, then pad/button move down 6px together; stagger each press by 160ms.",
+  "fallback": "assembled-idle.svg",
+  "conceptFallback": "idle.png",
+  "occlusion": "Draw presses below frame so fixed sockets hide extended shafts.",
+  "pressTravelPxByHead": [
+    48,
+    50,
+    51
+  ],
+  "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
+  "registeredFallback": "assembled-idle.png"
+}

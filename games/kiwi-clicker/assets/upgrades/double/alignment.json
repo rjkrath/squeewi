@@ -1,0 +1,41 @@
+{
+  "canvas": [
+    1800,
+    1100
+  ],
+  "layerOrder": [
+    "two button housings",
+    "two moving caps",
+    "front collar masks",
+    "single linkage"
+  ],
+  "linkageTransform": "translate(1122.8 577.2) scale(.4)",
+  "beakContact": [
+    1430,
+    710
+  ],
+  "linkageSourceContact": [
+    768,
+    332
+  ],
+  "buttonContacts": [
+    [
+      1242.8,
+      865.8
+    ],
+    [
+      1618.8,
+      865.8
+    ]
+  ],
+  "buttonScale": 0.32,
+  "motion": "Translate linkage and BOTH caps by the same 0\u201320 scene px; bases fixed.",
+  "travelPx": [
+    0,
+    20
+  ],
+  "fallback": "assembled-idle.svg",
+  "largeVariant": "For larger caps widen each button about its center up to 10%; preserve gap and linkage pad centers. Do not move beak contact.",
+  "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
+  "registeredFallback": "assembled-idle.png"
+}

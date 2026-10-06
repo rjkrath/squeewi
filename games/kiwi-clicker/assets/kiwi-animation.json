@@ -1,0 +1,37 @@
+{
+  "canvas": {
+    "width": 1536,
+    "height": 1024
+  },
+  "layers": {
+    "stationary": "kiwi-body-feet.png",
+    "moving": "kiwi-head-neck-beak.png",
+    "fallback": "kiwi-idle.png"
+  },
+  "drawOrder": [
+    "stationary",
+    "moving"
+  ],
+  "placement": {
+    "x": 0,
+    "y": 0,
+    "scale": 1
+  },
+  "neckPivot": {
+    "x": 900,
+    "y": 450
+  },
+  "billTip": {
+    "x": 1464,
+    "y": 624
+  },
+  "billTipNote": "Approximate center of terminal bill pixels; tip edge alpha ends around y625.",
+  "validatedRotationDegrees": [
+    0,
+    20
+  ],
+  "lighting": "diffuse",
+  "groundShadow": false,
+  "background": "transparent",
+  "preview": "preview.html"
+}
