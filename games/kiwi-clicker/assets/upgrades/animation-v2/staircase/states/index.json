@@ -1,0 +1,38 @@
+{
+  "canvas": [
+    1536,
+    1024
+  ],
+  "durationMs": 5400,
+  "frames": [
+    {
+      "phase": 0.02,
+      "file": "phase-020.png"
+    },
+    {
+      "phase": 0.08,
+      "file": "phase-080.png"
+    },
+    {
+      "phase": 0.24,
+      "file": "phase-240.png"
+    },
+    {
+      "phase": 0.4,
+      "file": "phase-400.png"
+    },
+    {
+      "phase": 0.56,
+      "file": "phase-560.png"
+    },
+    {
+      "phase": 0.72,
+      "file": "phase-720.png"
+    },
+    {
+      "phase": 0.87,
+      "file": "phase-870.png"
+    }
+  ],
+  "note": "Stable inspection states from the same layered renderer. Use continuous renderer paths for playback, not sparse frame swapping."
+}

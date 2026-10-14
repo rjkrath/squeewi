@@ -1,0 +1,14 @@
+{
+  "canvas": [
+    1774,
+    887
+  ],
+  "durationMs": 2400,
+  "frames": [
+    {
+      "phase": 0,
+      "file": "phase-000.png"
+    }
+  ],
+  "note": "Stable inspection states from the same layered renderer. Use continuous renderer paths for playback, not sparse frame swapping."
+}

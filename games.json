@@ -8,5 +8,25 @@
     "slug": "kiwi-archaeology-society",
     "source": "games/kiwi-archaeology-society",
     "title": "Kiwi Archaeology Society"
+  },
+  {
+    "slug": "kiwi-after-dark",
+    "source": "games/kiwi-after-dark",
+    "title": "Kiwi After Dark"
+  },
+  {
+    "slug": "captain-kiwi",
+    "source": "games/captain-kiwi",
+    "title": "Captain Kiwi"
+  },
+  {
+    "slug": "captain-kiwi-pirates",
+    "source": "games/captain-kiwi-pirates",
+    "title": "Captain Kiwi: Pirate Waters"
+  },
+  {
+    "slug": "kiwi-in-a-bag",
+    "source": "games/kiwi-in-a-bag",
+    "title": "Kiwi in a Bag"
   }
 ]

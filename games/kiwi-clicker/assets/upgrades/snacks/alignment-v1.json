@@ -1,0 +1,19 @@
+{
+  "canvas": [
+    1536,
+    1024
+  ],
+  "layerOrder": [
+    "base",
+    "worms"
+  ],
+  "wormsTransform": "translate(376 192) scale(.52 .42)",
+  "motion": "Small horizontal wiggle \u00b12 assembly px, roots stay tucked into soil.",
+  "travelPx": [
+    -2,
+    2
+  ],
+  "fallback": "idle.png",
+  "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
+  "registeredFallback": "assembled-idle.png"
+}

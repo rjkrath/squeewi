@@ -1,0 +1,130 @@
+{
+  "title": "Big Peck celebration balloons",
+  "canvas": [
+    256,
+    512
+  ],
+  "displayWidthPx": [
+    48,
+    60
+  ],
+  "recommendedTransformOrigin": [
+    128,
+    144
+  ],
+  "registration": {
+    "sourceCanvas": [
+      1024,
+      1536
+    ],
+    "matrix": [
+      0.3217753120665742,
+      0,
+      0,
+      0.3217753120665742,
+      -36.58807212205272,
+      7.589459084604716
+    ],
+    "uniformScale": true
+  },
+  "animation": "Float each intact sprite upward with gentle drift; no animation frames or separate string needed.",
+  "lighting": "Diffuse ambient, no cast shadow",
+  "formats": [
+    "png",
+    "lossless webp"
+  ],
+  "assets": [
+    {
+      "color": "coral",
+      "png": "balloon-coral.png",
+      "webp": "balloon-coral.webp",
+      "dimensions": [
+        256,
+        512
+      ],
+      "stringInclusiveBounds": [
+        25,
+        24,
+        232,
+        488
+      ],
+      "gameRelativePNG": "assets/celebration/balloon-coral.png",
+      "gameRelativeWebP": "assets/celebration/balloon-coral.webp"
+    },
+    {
+      "color": "gold",
+      "png": "balloon-gold.png",
+      "webp": "balloon-gold.webp",
+      "dimensions": [
+        256,
+        512
+      ],
+      "stringInclusiveBounds": [
+        25,
+        24,
+        231,
+        488
+      ],
+      "gameRelativePNG": "assets/celebration/balloon-gold.png",
+      "gameRelativeWebP": "assets/celebration/balloon-gold.webp"
+    },
+    {
+      "color": "green",
+      "png": "balloon-green.png",
+      "webp": "balloon-green.webp",
+      "dimensions": [
+        256,
+        512
+      ],
+      "stringInclusiveBounds": [
+        25,
+        24,
+        232,
+        488
+      ],
+      "gameRelativePNG": "assets/celebration/balloon-green.png",
+      "gameRelativeWebP": "assets/celebration/balloon-green.webp"
+    },
+    {
+      "color": "teal",
+      "png": "balloon-teal.png",
+      "webp": "balloon-teal.webp",
+      "dimensions": [
+        256,
+        512
+      ],
+      "stringInclusiveBounds": [
+        25,
+        24,
+        232,
+        488
+      ],
+      "gameRelativePNG": "assets/celebration/balloon-teal.png",
+      "gameRelativeWebP": "assets/celebration/balloon-teal.webp"
+    },
+    {
+      "color": "lavender",
+      "png": "balloon-lavender.png",
+      "webp": "balloon-lavender.webp",
+      "dimensions": [
+        256,
+        512
+      ],
+      "stringInclusiveBounds": [
+        25,
+        24,
+        231,
+        488
+      ],
+      "gameRelativePNG": "assets/celebration/balloon-lavender.png",
+      "gameRelativeWebP": "assets/celebration/balloon-lavender.webp"
+    }
+  ],
+  "contactSheet": "contact-sheet.png",
+  "boundsConvention": "[left,top,right,bottom], right/bottom exclusive; includes string; alpha>0",
+  "notes": [
+    "PNG/WebP alpha retained, registered once with native SVG edge cleanup.",
+    "All variants share identical canvas and one common uniform source-to-sprite transform.",
+    "No game or style files changed."
+  ]
+}

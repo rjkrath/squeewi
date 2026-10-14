@@ -1,0 +1,20 @@
+{
+  "canvas": [
+    1536,
+    1024
+  ],
+  "contact": [
+    768,
+    250
+  ],
+  "pressedTravelPx": 62.5,
+  "files": {
+    "idle": "button-idle.png",
+    "pressed": "button-pressed.png",
+    "capIdle": "cap-idle.png",
+    "capPressed": "cap-pressed.png",
+    "surfaceIdle": "surface-idle.png",
+    "surfacePressed": "surface-pressed.png"
+  },
+  "note": "Uniform scaling only. Scene travel = 62.5 * scale. Full buttons include front housing occlusion."
+}

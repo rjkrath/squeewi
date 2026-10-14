@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Worm salad bar",
+    "file": "salad-bar/assembled-idle.png",
+    "canvas": [
+      1774,
+      887
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Static no-kiwi image; no animation.",
+    "separateAnimationLayers": false,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "salad-bar"
+  },
+  {
+    "title": "Button slide",
+    "file": "slide/assembled-idle.png",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Move kiwi down curved slide; depress each cap as it passes.",
+    "separateAnimationLayers": true,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "slide"
+  },
+  {
+    "title": "Button trampoline",
+    "file": "trampoline/assembled-idle.png",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Bounce kiwi vertically; cap compresses at landing.",
+    "separateAnimationLayers": true,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "trampoline"
+  },
+  {
+    "title": "Button seesaw",
+    "file": "seesaw/assembled-idle.png",
+    "canvas": [
+      1774,
+      887
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Rock board around central pivot; alternate foot presses.",
+    "separateAnimationLayers": true,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "seesaw"
+  },
+  {
+    "title": "Button staircase",
+    "file": "staircase/assembled-idle.png",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Hop down one step at a time; depress occupied cap.",
+    "separateAnimationLayers": true,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "staircase"
+  },
+  {
+    "title": "Pecking carousel",
+    "file": "carousel/assembled-idle.png",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Rotate button platform; peck when a button reaches the bill.",
+    "separateAnimationLayers": true,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "carousel"
+  },
+  {
+    "title": "Kiwi conga line",
+    "file": "conga/assembled-idle.png",
+    "canvas": [
+      2172,
+      724
+    ],
+    "kind": "assembled static artwork",
+    "animationIdea": "Staggered dance in place with a lead-bird press.",
+    "separateAnimationLayers": true,
+    "animationManifest": "animation-v2/manifest.json",
+    "animationScene": "conga"
+  }
+]

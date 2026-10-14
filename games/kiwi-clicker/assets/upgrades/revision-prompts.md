@@ -1,0 +1,1 @@
+Built-in ImageGen edits: richer saturated yellow gold sleeve, smooth matte cocoa brown soil with a few rounded crumbs; preserve containers, plants, pose, diffuse lighting and transparency. Worm layers scaled to 55% with native SVG registration.

@@ -1,0 +1,32 @@
+{
+  "canvas": [
+    1086,
+    362
+  ],
+  "sheet": "pose-sheet.png",
+  "grid": [
+    2,
+    2
+  ],
+  "frames": [
+    "idle.png",
+    "approach.png",
+    "contact.png",
+    "recovery.png"
+  ],
+  "durationMs": [
+    220,
+    160,
+    140,
+    220
+  ],
+  "loopOrder": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "contactFrame": 2,
+  "render": "Frame swapping; clear before draw, use one fixed contain rectangle for all frames. Never independently trim frames or stretch anatomy.",
+  "limitations": "Generated pose sequences may contain small feather/background drift; use deterministic layered renderer for stable scenery and continuous motion."
+}

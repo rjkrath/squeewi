@@ -38,3 +38,34 @@ Bean retrieves and individually ties every piece before a crossing. Cargo is the
 Bean loads heavier objects low. When Pip and the cart stop, Bean climbs to each loose item and ties its own visible rope. Moving interrupts the current knot; finished knots remain secure. Loose items can tip off tall piles, and Bean catches reachable pieces or retrieves misses. An area succeeds only when every treasure has been found and every individual item collected and tied down.
 
 Run `npm run dev` from the arcade project to play at `/play/kiwi-archaeology-society/`. Run `node --test tests/engine.test.mjs tests/pyramids.test.cjs` for arcade and archaeology regression checks, including S, exit running, all routes, individual knots, unloading, reloads, and returning to earlier areas.
+
+
+## Naxos expedition
+
+Completing the Desert, Pyramid, Oasis and Undertomb unlocks the **Naxos →** sign at the far end of the oasis. Click it to sail to the Olive Grove. The four connected Greek areas are the Olive Grove, Temple Courtyard, Oracle’s Chamber and Temple Below, with 24 new finds (26 cargo pieces), original vector artwork and 1–4 pecks per find. Half the finds require sniffing to reveal their initial clue.
+
+The cart stays loaded across all Greek areas, including saved-game reloads. Return to the Olive Grove and click **Harbour ←** to deposit the cargo and sail back to the oasis. Completing all four collections triggers the collection bell and a departing flock of pigeons alongside Bean’s confetti. Existing Egyptian save IDs remain unchanged.
+
+Greek catalogue, artwork and scenery live in `greek.js`, loaded before `game.js`. Run `node --test tests/pyramids.test.cjs` for the complete expedition regression, including all discoveries, routes, packing, unlock and save/reload checks.
+
+
+## Jungle expedition
+
+After all four Greek areas are completed, click **Jungle →** in the Olive Grove (x=1650). Explore the Canopy Trail, Rain Courtyard, Root Vault and Heart of the Temple. There are 24 new finds / 26 cargo pieces with original SVG artwork, half hidden until sniffed, plus wall alcoves and root-covered finds. The first peck clears roots; total effort stays within 1–4 pecks.
+
+All four areas share a cart, with a swaying leaf umbrella, rainfall, mossy ruins and ceiling drips. Return via **← Naxos** in the Canopy Trail to deposit the collection. Catalogue IDs are appended, preserving existing saves. `jungle.js` contains the catalogue, artwork and canvas scenery and loads before `game.js`. The expedition regression now plays through the complete jungle chapter and checks unlocks, roots, packing, save/reload and return travel.
+
+
+### Bathhouse and highland expeditions
+
+Completing all four jungle areas unlocks **Baths →** on the Canopy Trail. The Aqueduct Garden leads to the Mosaic Baths and the furnace beneath them. Completing these three areas unlocks **Castle →** in the Aqueduct Garden. The Cliffside Castle leads to the Clockwork Hall, then upstairs to the Stargazer’s Tower.
+
+Each of the six new scenes has six unique discoveries, one-to-four-peck excavation, and three finds without surface clues until sniffed. Bath ducks and pocket stars contain three cargo pieces each. The cart stays loaded inside each three-scene site; leaving the site warehouses the collection. Existing catalogue IDs and saves are preserved. Art, catalogue data and scenery live in `expeditions.js`.
+
+Validation: `node --test tests/pyramids.test.cjs` covers the full route, all discoveries, hidden clues, packing, both stair directions, unlocks, saves, and return journeys.
+
+
+Express freight lifts in the Great Tomb, Temple Below, Heart of the Temple, Under the Baths and Stargazer’s Tower return directly to the site’s outdoor scene. Click the platform or use its Lift button. Pip, Bean and the cart ride together; unfinished finds remain recoverable and existing warehouse rules apply when exiting the pyramid.
+
+
+Jungle rooms have distinct architecture and atmosphere throughout their length: layered forest and river on the trail, pale sunlit terraces and a frog fountain in the courtyard, earthen walls and giant living roots in the vault, and blue ceremonial arches with golden seed murals in the heart. Ground materials and excavation debris change with each room; rain gives way to ceiling drips and finally fireflies.

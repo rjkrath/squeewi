@@ -1,0 +1,323 @@
+{
+  "id": "rain-machine",
+  "title": "Button rain machine",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "durationMs": 4000,
+  "lighting": "diffuse ambient; no cast shadow",
+  "alpha": 1,
+  "background": {
+    "file": "background.png",
+    "includes": "fixed hopper, BB contents, supports and three open spouts",
+    "alternatives": [
+      "fixed-box.png",
+      "fixed-supports.png",
+      "fixed-spouts.png"
+    ],
+    "doNotStackAlternativesOverBackground": true,
+    "sourceTransform": [
+      0.78,
+      0,
+      0,
+      0.78,
+      460,
+      70
+    ]
+  },
+  "kiwi": {
+    "body": "kiwi-body.png",
+    "headNeck": "kiwi-head-neck.png",
+    "tugHeadNeck": "kiwi-head-neck-tug.png",
+    "sourceTransform": [
+      0.34,
+      0,
+      0,
+      0.34,
+      55,
+      480
+    ],
+    "sourceNeckPivot": [
+      900,
+      450
+    ],
+    "neckPivot": [
+      361,
+      633
+    ],
+    "billTipIdle": [
+      552.76,
+      692.16
+    ],
+    "billTipTug": [
+      546.8741615651218,
+      708.6478635683985
+    ],
+    "safeHeadDegrees": [
+      0,
+      5
+    ],
+    "headIncludes": "whole head, long bill, continuous neck and broad overlapping throat feather plug",
+    "bodyIncludes": "body and both planted feet; draw head/neck after body",
+    "feetGroundY": 801,
+    "opacity": 1
+  },
+  "cord": {
+    "idle": "cord-idle.png",
+    "tug": "cord-tug.png",
+    "anchor": [
+      673,
+      260
+    ],
+    "elbow": [
+      552.76,
+      260
+    ],
+    "gripIdle": [
+      552.76,
+      692.16
+    ],
+    "gripTug": [
+      546.8741615651218,
+      708.6478635683985
+    ],
+    "ringRadius": 9,
+    "strokeWidth": 5,
+    "color": "#82765f",
+    "highlightColor": "#c4b89c",
+    "suggestedDynamicPath": "M673 260 H552.76 Q(grip.x) 260 (grip.x) 285 V(grip.y-9); ring centered on grip",
+    "note": "Anchor and elbow fixed. Deform/rebuild only vertical section as grip follows head; do not translate the entire cord."
+  },
+  "spoutExits": [
+    [
+      850,
+      431.14
+    ],
+    [
+      1052.8,
+      431.14
+    ],
+    [
+      1261.06,
+      431.14
+    ]
+  ],
+  "gates": [
+    {
+      "file": "gate-0.png",
+      "open": "gate-0-open.png",
+      "pivot": [
+        850,
+        431.14
+      ],
+      "closedCenter": [
+        850,
+        430.14
+      ],
+      "openTranslation": [
+        46,
+        0
+      ]
+    },
+    {
+      "file": "gate-1.png",
+      "open": "gate-1-open.png",
+      "pivot": [
+        1052.8,
+        431.14
+      ],
+      "closedCenter": [
+        1052.8,
+        430.14
+      ],
+      "openTranslation": [
+        46,
+        0
+      ]
+    },
+    {
+      "file": "gate-2.png",
+      "open": "gate-2-open.png",
+      "pivot": [
+        1261.06,
+        431.14
+      ],
+      "closedCenter": [
+        1261.06,
+        430.14
+      ],
+      "openTranslation": [
+        46,
+        0
+      ]
+    }
+  ],
+  "buttons": {
+    "commonSourceContact": [
+      768,
+      250
+    ],
+    "scale": 0.17,
+    "contacts": [
+      [
+        850,
+        690
+      ],
+      [
+        1052.8,
+        690
+      ],
+      [
+        1261.06,
+        690
+      ]
+    ],
+    "capTravel": 22.95,
+    "groundY": 807.81,
+    "parts": [
+      {
+        "housing": "button-0-housing.png",
+        "front": "button-0-housing-front.png",
+        "cap": "button-0-cap-up.png",
+        "capDown": "button-0-cap-down.png",
+        "contact": [
+          850,
+          690
+        ]
+      },
+      {
+        "housing": "button-1-housing.png",
+        "front": "button-1-housing-front.png",
+        "cap": "button-1-cap-up.png",
+        "capDown": "button-1-cap-down.png",
+        "contact": [
+          1052.8,
+          690
+        ]
+      },
+      {
+        "housing": "button-2-housing.png",
+        "front": "button-2-housing-front.png",
+        "cap": "button-2-cap-up.png",
+        "capDown": "button-2-cap-down.png",
+        "contact": [
+          1261.06,
+          690
+        ]
+      }
+    ],
+    "drawOrder": [
+      "housing",
+      "cap",
+      "housing-front"
+    ]
+  },
+  "bb": {
+    "file": "bb.png",
+    "canvas": [
+      64,
+      64
+    ],
+    "center": [
+      32,
+      32
+    ],
+    "opaqueRadius": 24,
+    "sceneRadius": 14,
+    "scale": 0.583333333333,
+    "registered": "bb-registered.png",
+    "registeredCenter": [
+      768,
+      512
+    ],
+    "registeredRadius": 14,
+    "opacity": 1,
+    "impactCenters": [
+      [
+        850,
+        676
+      ],
+      [
+        1052.8,
+        676
+      ],
+      [
+        1261.06,
+        676
+      ]
+    ],
+    "pressedCenters": [
+      [
+        850,
+        698.95
+      ],
+      [
+        1052.8,
+        698.95
+      ],
+      [
+        1261.06,
+        698.95
+      ]
+    ],
+    "exitCenters": [
+      [
+        728,
+        1100
+      ],
+      [
+        1052.8,
+        1100
+      ],
+      [
+        1408,
+        1100
+      ]
+    ],
+    "maxForegroundScale": 1.55,
+    "fullyOffscreenCenterY": 1047
+  },
+  "drawOrder": [
+    "background",
+    "gates",
+    "button housings",
+    "button caps",
+    "button housing fronts",
+    "BBs",
+    "kiwi body",
+    "cord",
+    "kiwi head-neck"
+  ],
+  "suggestedTimingMs": {
+    "tug": [
+      0,
+      500
+    ],
+    "gatesOpen": [
+      300,
+      1050
+    ],
+    "release": [
+      500,
+      680,
+      860
+    ],
+    "fallDuration": 700,
+    "pressDuration": 180,
+    "rollDuration": 1450,
+    "lastExit": 3190,
+    "restUntil": 4000
+  },
+  "assembled": {
+    "idle": "assembled-idle.png",
+    "tug": "assembled-tug.png",
+    "impact": "assembled-impact.png"
+  },
+  "notes": [
+    "All layers except compact bb.png are full-canvas 1536×1024 registered images.",
+    "Use uniform scaling and a fixed viewBox; no independently resized states.",
+    "Never fade BBs; hide/reset only after their full circle is beyond canvas bottom.",
+    "No game files, global manifest or renderer are changed by this pack."
+  ]
+}

@@ -16,5 +16,17 @@
   ],
   "fallback": "idle.png",
   "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
-  "registeredFallback": "assembled-idle.png"
+  "registeredFallback": "assembled-idle.png",
+  "updatedParts": {
+    "base": "base-registered.png",
+    "worms": "worms-registered.png",
+    "assembled": "assembled-idle.png",
+    "note": "Use registered parts at identity transform on 1536\u00d71024. Worms reduced to 55%; soil simplified."
+  },
+  "canonicalParts": {
+    "base": "base-registered.png",
+    "worms": "worms-registered.png"
+  },
+  "canonicalPartsTransform": "identity",
+  "rawTransformsAreLegacy": true
 }

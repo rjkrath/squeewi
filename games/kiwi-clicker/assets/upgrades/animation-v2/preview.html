@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kiwi animation layers</title>
+<style>
+body{margin:24px;background:#faf7ee;color:#36453c;font:16px system-ui}h1{font-size:25px}header{max-width:950px}button,input,select{font:inherit}button,select{border:1px solid #9cab90;border-radius:8px;padding:7px 12px;background:white}nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:20px 0}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}article{padding:14px;background:white;border:1px solid #d8dfcc;border-radius:18px}.art{height:230px;background:#e5edd6;border-radius:12px;overflow:hidden}canvas{width:100%;height:230px;display:block}h2{font-size:18px;margin-bottom:8px}p{line-height:1.45}.note{font-size:14px;min-height:42px}.status{font-size:13px;color:#52634b}input[type=range]{width:100%}.dark .art{background:#243428}.checker .art{background:conic-gradient(#ddd 25%,#fff 0 50%,#ddd 0 75%,#fff 0) 0 0/18px 18px}
+</style>
+<header><h1>Kiwi animation layers</h1><p>Six continuous loops at 230px card size. The salad bar stays static. Scenery and textures use the same pixels throughout each loop.</p></header>
+<nav><button id="play">Pause</button><label>Background <select id="bg"><option value="">Game green</option><option value="dark">Dark</option><option value="checker">Transparency grid</option></select></label><label><input id="guides" type="checkbox">Contact guides</label><span id="status">Loading layers…</span></nav>
+<main id="cards"></main>
+<script type="module">
+import{createRenderer}from './renderer.js';
+const manifest=await(await fetch('./manifest.json')).json();
+const notes={slide:'Seated slide through all four buttons, then exit and fade back in.',trampoline:'Rigid bird bounce; springs and cap compress together.',seesaw:'Board-mounted housings; alternate left and right presses through level.',staircase:'Five planted landings and presses, then a concealed reset.',carousel:'Five buttons orbit, stop under the bill, press and release.',conga:'Staggered dance in place; lead bill lifts clear before pressing.','salad-bar':'Static, with no kiwi. No worm animation.'};
+const cards=Object.entries(manifest.scenes).map(([key,m])=>{const article=document.createElement('article');article.innerHTML=`<div class="art"><canvas width="760" height="460" aria-label="${m.title}"></canvas></div><h2>${m.title}</h2><p class="note">${notes[key]}</p><input aria-label="${m.title} loop position" type="range" min="0" max="1000" value="0"><div class="status"></div>`;document.querySelector('main').append(article);return{key,m,canvas:article.querySelector('canvas'),slider:article.querySelector('input'),label:article.querySelector('.status'),manual:null}});
+const render=await createRenderer(manifest);let playing=true,start=performance.now(),frozen=0;
+cards.find(c=>c.key==='salad-bar').slider.disabled=true;
+document.querySelector('#status').textContent='All layers loaded';
+document.querySelector('#play').onclick=()=>{if(playing){frozen=performance.now()-start;playing=false}else{start=performance.now()-frozen;playing=true;cards.forEach(c=>c.manual=null)}document.querySelector('#play').textContent=playing?'Pause':'Play'};
+document.querySelector('#bg').onchange=e=>document.body.className=e.target.value;
+cards.forEach(c=>c.slider.oninput=()=>{playing=false;document.querySelector('#play').textContent='Play';c.manual=Number(c.slider.value)/1000*c.m.durationMs;frozen=performance.now()-start});
+window.assetPreview={manifest,cards,render,setPhase(key,phase){const c=cards.find(c=>c.key===key);c.manual=phase*c.m.durationMs;playing=false;render(c.canvas,key,c.manual)},setAllPhase(phase){playing=false;for(const c of cards){c.manual=phase*c.m.durationMs;render(c.canvas,c.key,c.manual)}},resume(){cards.forEach(c=>c.manual=null);playing=true;start=performance.now()}};
+function frame(now){const t=playing?now-start:frozen;for(const c of cards){const time=c.key==='salad-bar'?0:c.manual??t;const s=render(c.canvas,c.key,time,{guides:document.querySelector('#guides').checked});c.slider.value=Math.round(s.phase*1000);c.label.textContent=c.key==='salad-bar'?'Static':Math.round(s.phase*100)+'% of loop · '+c.m.durationMs/1000+' seconds'}requestAnimationFrame(frame)}requestAnimationFrame(frame);
+</script></html>

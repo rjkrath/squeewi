@@ -1,0 +1,7 @@
+{
+  "canvas": [1774, 887],
+  "up": "assembled-up.png",
+  "idle": "assembled-idle.png",
+  "pressed": "assembled-pressed.png",
+  "note": "Both caps have visible released plungers. These are generated full-scene states; minor artwork drift remains, so they are visual references rather than precision registered animation layers."
+}

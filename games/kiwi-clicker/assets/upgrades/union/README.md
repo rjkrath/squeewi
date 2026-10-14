@@ -1,0 +1,1 @@
+Current assembled-idle.png: three kiwis in sage green UNION T-shirts, transparent background. Built-in ImageGen edit of approved kiwi composition; corrected to remove visible wings/arms. Previous native composition preserved as assembled-idle-no-shirts-v1.svg/png. Use current PNG directly.

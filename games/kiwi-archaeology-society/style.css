@@ -13,3 +13,31 @@
 .routes{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}.routes .portal{margin-left:0}.portal[hidden]{display:none}.manifest-area{font-size:11px;color:#92764f;margin:-5px 0 12px}.warehouse-heading{border-top:1px solid #dcd0b5;margin-top:22px;padding-top:17px}.warehouse-heading h3{font:17px Georgia}.warehouse-heading p{font-size:9px;color:#92764f;margin:7px 0 12px}#archive details{border-top:1px solid #dfd2b7;padding:12px 0}#archive summary{cursor:pointer;font-size:11px}#archive summary span{float:right;font-size:9px;color:#92764f}#archive .collection{margin-top:12px}.sniff kbd{display:inline-block}
 
 .collection{grid-template-columns:repeat(4,minmax(0,1fr))}.specimen{min-width:0}.specimen.empty small{font-size:5px;letter-spacing:.3px}.specimen small{max-width:100%;overflow-wrap:anywhere}
+
+.header-actions #new-game{border:1px solid #b99b6c;border-radius:6px;padding:9px 12px;background:#eee0bf;white-space:nowrap}@media(max-width:540px){header{height:auto;min-height:80px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:12px}.header-actions{gap:12px;flex-wrap:wrap}}
+
+/* A quiet directional marker follows the exit without changing sign hit areas. */
+#exit-guide{position:absolute;top:57px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:3px;pointer-events:none;color:#584d37;text-shadow:0 1px #fff5dc;width:132px;font:12px Georgia,serif;text-align:center}
+#exit-guide[hidden]{display:none}#exit-guide span{background:#f7ebd2e8;padding:4px 10px;border:1px solid #bda77888;border-radius:12px;box-shadow:0 2px 5px #34433314}
+#exit-guide svg{width:27px;height:27px;overflow:visible;filter:drop-shadow(0 1px 1px #fff0ce);--turn:0deg;--dx:0px;--dy:5px;animation:exit-nudge 1.5s ease-in-out infinite}
+#exit-guide svg path{fill:none;stroke:#f9edcc;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke;filter:drop-shadow(0 0 1px #705e3a)}
+#exit-guide[data-direction="left"] svg{--turn:90deg;--dx:-5px;--dy:0px}#exit-guide[data-direction="right"] svg{--turn:-90deg;--dx:5px;--dy:0px}
+@keyframes exit-nudge{0%,100%{transform:translate(0,0) rotate(var(--turn))}50%{transform:translate(var(--dx),var(--dy)) rotate(var(--turn))}}
+@media(prefers-reduced-motion:reduce){#exit-guide svg{animation:none;transform:rotate(var(--turn))}}
+@media(max-width:740px){#exit-guide{top:49px;width:105px;font-size:10px}#exit-guide svg{width:23px;height:23px}}
+
+.heading-instructions{align-self:center;width:222px;flex-shrink:0;margin-left:18px;color:#887553;font-size:11px;line-height:1.6}
+.heading-instructions #instruction{display:flex;flex-direction:column;gap:5px}
+.heading-instructions #instruction>span{display:flex;align-items:center;gap:8px}
+.heading-instructions kbd{font-size:10px;font-family:inherit;background:#f0e4cc;border:1px solid #d9c7a3;border-radius:4px;padding:2px 5px;min-width:78px;text-align:center;color:#735d3b}
+.heading-instructions small{display:block;font-size:10px;line-height:1.6;margin-top:4px;max-width:222px}
+@media(max-width:1000px){.site-heading{flex-wrap:wrap;gap:12px}.heading-instructions{margin-left:0;width:100%;}.heading-instructions #instruction{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}.heading-instructions small{grid-column:1 / -1;max-width:none}.heading-instructions kbd{min-width:70px}}
+@media(max-width:420px){.heading-instructions{font-size:10px}.heading-instructions #instruction{gap:6px}.heading-instructions #instruction>span{gap:5px}.heading-instructions kbd{font-size:9px;min-width:66px}}
+.heading-instructions #instruction{text-align:left;align-items:stretch}.heading-instructions #instruction>span{width:100%;justify-content:flex-start}.heading-instructions kbd{flex-shrink:0}
+
+#archive>.warehouse-area>summary{font-size:12px;color:#725c39}
+#archive .warehouse-levels{margin:10px 0 0 9px;padding-left:10px;border-left:2px solid #d8c8a5}
+#archive .warehouse-levels details{padding:10px 0}
+#archive .warehouse-levels details:first-child{border-top:0}
+#archive .warehouse-levels summary{font-size:10px;line-height:1.5}
+#archive .warehouse-levels summary span{font-size:8px}

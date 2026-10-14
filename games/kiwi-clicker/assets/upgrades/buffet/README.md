@@ -1,0 +1,2 @@
+Worm buffet: assembled-idle.png, 1536×1024 transparent RGBA. Built-in ImageGen prompt: wide abundant cute worm snack buffet, three silver dishes and an open tin on a sage serving tray, smooth cocoa filling, tiny pink worms, neutral diffuse light, no ground shadow, matching existing snacks asset.
+Revision: tray replaced with a pale oak buffet table with four visible legs. Built-in ImageGen edit; transparent RGBA. Old tray asset retained as assembled-idle-tray-v1.png.

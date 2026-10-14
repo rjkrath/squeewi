@@ -1,0 +1,643 @@
+{
+  "version": 2,
+  "mode": "deterministic layers and continuous paths",
+  "renderer": "renderer.js",
+  "preview": "preview.html",
+  "shared": {
+    "canvas": [
+      1536,
+      1024
+    ],
+    "contact": [
+      768,
+      250
+    ],
+    "buttonTravel": 135,
+    "files": [
+      "common/housing.png",
+      "common/housing-front.png",
+      "common/cap-up.png",
+      "common/cap-down.png",
+      "common/button-up.png",
+      "common/button-down.png",
+      "common/surface.png"
+    ]
+  },
+  "scenes": {
+    "salad-bar": {
+      "title": "Worm salad bar",
+      "canvas": [
+        1774,
+        887
+      ],
+      "durationMs": 2400,
+      "layers": [
+        "static"
+      ],
+      "motion": "Static approved no-kiwi artwork. No animation, including worms."
+    },
+    "slide": {
+      "title": "Button slide",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "durationMs": 5000,
+      "layers": [
+        "background",
+        "kiwi"
+      ],
+      "contacts": [
+        [
+          630,
+          365
+        ],
+        [
+          805,
+          525
+        ],
+        [
+          980,
+          665
+        ],
+        [
+          1255,
+          820
+        ]
+      ],
+      "contactPhases": [
+        0.12,
+        0.32,
+        0.5,
+        0.7
+      ],
+      "buttonScale": 0.15,
+      "actorPivot": [
+        630,
+        365
+      ],
+      "path": [
+        [
+          0,
+          -900,
+          330
+        ],
+        [
+          0.12,
+          630,
+          365
+        ],
+        [
+          0.32,
+          805,
+          525
+        ],
+        [
+          0.5,
+          980,
+          665
+        ],
+        [
+          0.7,
+          1255,
+          820
+        ],
+        [
+          0.94,
+          2600,
+          865
+        ]
+      ],
+      "reset": "Exit fully offscreen right, reset while out of view, then enter from the left. Fully opaque throughout.",
+      "safeRotationDegrees": [
+        0,
+        0
+      ]
+    },
+    "trampoline": {
+      "title": "Button trampoline",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "durationMs": 1800,
+      "layers": [
+        "base",
+        "spring-0",
+        "spring-1",
+        "spring-2",
+        "spring-3",
+        "spring-4",
+        "kiwi",
+        "base-front"
+      ],
+      "contact": [
+        720,
+        480
+      ],
+      "capCenter": [
+        768,
+        480
+      ],
+      "capScale": 0.68,
+      "capTravel": 45,
+      "springBottoms": [
+        737,
+        621,
+        738,
+        779,
+        782
+      ],
+      "springHeights": [
+        185,
+        106,
+        186,
+        135,
+        138
+      ],
+      "actorPivot": [
+        720,
+        480
+      ],
+      "bounceHeight": 70,
+      "landingPhase": 0.5,
+      "compressionPhase": 0.62,
+      "motion": "Rigid kiwi vertical translation; cap and spring compression share the same displacement."
+    },
+    "seesaw": {
+      "title": "Button seesaw",
+      "viewport": [
+        0,
+        -100,
+        1774,
+        987
+      ],
+      "canvas": [
+        1774,
+        887
+      ],
+      "durationMs": 3200,
+      "layers": [
+        "support",
+        "board",
+        "kiwi-left",
+        "kiwi-right",
+        "support-front"
+      ],
+      "boardPivot": [
+        887,
+        619
+      ],
+      "buttonMount": "Both identical housings are mounted on the board and rotate with it.",
+      "contacts": [
+        [
+          280,
+          388
+        ],
+        [
+          1494,
+          368
+        ]
+      ],
+      "buttonScale": 0.25,
+      "safeRotationDegrees": [
+        -8,
+        8
+      ],
+      "leftDownPhase": 0.25,
+      "rightDownPhase": 0.75,
+      "levelPhases": [
+        0,
+        0.5,
+        1
+      ]
+    },
+    "staircase": {
+      "title": "Button staircase",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "durationMs": 5400,
+      "layers": [
+        "background",
+        "kiwi"
+      ],
+      "contacts": [
+        [
+          230,
+          425
+        ],
+        [
+          510,
+          515
+        ],
+        [
+          790,
+          605
+        ],
+        [
+          1060,
+          700
+        ],
+        [
+          1350,
+          790
+        ]
+      ],
+      "buttonScale": 0.35,
+      "actorPivot": [
+        230,
+        425
+      ],
+      "hopHeight": 105,
+      "contactPhases": [
+        0.08,
+        0.24,
+        0.4,
+        0.56,
+        0.72
+      ],
+      "reset": "Exit fully offscreen right, reset while out of view, then enter from the left. Fully opaque throughout.",
+      "safeRotationDegrees": [
+        0,
+        0
+      ]
+    },
+    "carousel": {
+      "title": "Pecking carousel",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "durationMs": 8000,
+      "layers": [
+        "base",
+        "platform",
+        "body",
+        "head",
+        "base-front"
+      ],
+      "rotationCenter": [
+        1105,
+        650
+      ],
+      "trackRadii": [
+        300,
+        75
+      ],
+      "buttonCount": 5,
+      "buttonScale": 0.174,
+      "contactAngleRadians": 2.515,
+      "neckPivot": [
+        534.6,
+        424.4
+      ],
+      "billTipIdle": [
+        878.64,
+        530.54
+      ],
+      "safeHeadDegrees": [
+        0,
+        11.5
+      ],
+      "dwellMs": 720,
+      "occlusion": "Platform, back-to-front sorted button assemblies, kiwi body/head, fixed front ring.",
+      "motion": "Five identical buttons orbit an elliptical perspective track; rotationally symmetric platform stays stable. Index, dwell, peck, release."
+    },
+    "rain-machine": {
+      "id": "rain-machine",
+      "title": "Button rain machine",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "durationMs": 4600,
+      "lighting": "diffuse ambient; no cast shadow",
+      "alpha": 1,
+      "background": {
+        "file": "background.png",
+        "includes": "fixed hopper, BB contents, supports and three open spouts",
+        "alternatives": [
+          "fixed-box.png",
+          "fixed-supports.png",
+          "fixed-spouts.png"
+        ],
+        "doNotStackAlternativesOverBackground": true,
+        "sourceTransform": [
+          0.78,
+          0,
+          0,
+          0.78,
+          460,
+          70
+        ]
+      },
+      "kiwi": {
+        "body": "kiwi-body.png",
+        "headNeck": "kiwi-head-neck.png",
+        "tugHeadNeck": "kiwi-head-neck-tug.png",
+        "sourceTransform": [
+          0.34,
+          0,
+          0,
+          0.34,
+          55,
+          480
+        ],
+        "sourceNeckPivot": [
+          900,
+          450
+        ],
+        "neckPivot": [
+          361,
+          633
+        ],
+        "billTipIdle": [
+          552.76,
+          692.16
+        ],
+        "billTipTug": [
+          546.8741615651218,
+          708.6478635683985
+        ],
+        "safeHeadDegrees": [
+          0,
+          5
+        ],
+        "headIncludes": "whole head, long bill, continuous neck and broad overlapping throat feather plug",
+        "bodyIncludes": "body and both planted feet; draw head/neck after body",
+        "feetGroundY": 801,
+        "opacity": 1
+      },
+      "cord": {
+        "idle": "cord-idle.png",
+        "tug": "cord-tug.png",
+        "anchor": [
+          673,
+          260
+        ],
+        "elbow": [
+          552.76,
+          260
+        ],
+        "gripIdle": [
+          552.76,
+          692.16
+        ],
+        "gripTug": [
+          546.8741615651218,
+          708.6478635683985
+        ],
+        "ringRadius": 9,
+        "strokeWidth": 5,
+        "color": "#82765f",
+        "highlightColor": "#c4b89c",
+        "suggestedDynamicPath": "M673 260 H552.76 Q(grip.x) 260 (grip.x) 285 V(grip.y-9); ring centered on grip",
+        "note": "Anchor and elbow fixed. Deform/rebuild only vertical section as grip follows head; do not translate the entire cord."
+      },
+      "spoutExits": [
+        [
+          850,
+          431.14
+        ],
+        [
+          1052.8,
+          431.14
+        ],
+        [
+          1261.06,
+          431.14
+        ]
+      ],
+      "gates": [
+        {
+          "file": "gate-0.png",
+          "open": "gate-0-open.png",
+          "pivot": [
+            850,
+            431.14
+          ],
+          "closedCenter": [
+            850,
+            430.14
+          ],
+          "openTranslation": [
+            46,
+            0
+          ]
+        },
+        {
+          "file": "gate-1.png",
+          "open": "gate-1-open.png",
+          "pivot": [
+            1052.8,
+            431.14
+          ],
+          "closedCenter": [
+            1052.8,
+            430.14
+          ],
+          "openTranslation": [
+            46,
+            0
+          ]
+        },
+        {
+          "file": "gate-2.png",
+          "open": "gate-2-open.png",
+          "pivot": [
+            1261.06,
+            431.14
+          ],
+          "closedCenter": [
+            1261.06,
+            430.14
+          ],
+          "openTranslation": [
+            46,
+            0
+          ]
+        }
+      ],
+      "buttons": {
+        "commonSourceContact": [
+          768,
+          250
+        ],
+        "scale": 0.17,
+        "contacts": [
+          [
+            850,
+            690
+          ],
+          [
+            1052.8,
+            690
+          ],
+          [
+            1261.06,
+            690
+          ]
+        ],
+        "capTravel": 22.95,
+        "groundY": 807.81,
+        "parts": [
+          {
+            "housing": "button-0-housing.png",
+            "front": "button-0-housing-front.png",
+            "cap": "button-0-cap-up.png",
+            "capDown": "button-0-cap-down.png",
+            "contact": [
+              850,
+              690
+            ]
+          },
+          {
+            "housing": "button-1-housing.png",
+            "front": "button-1-housing-front.png",
+            "cap": "button-1-cap-up.png",
+            "capDown": "button-1-cap-down.png",
+            "contact": [
+              1052.8,
+              690
+            ]
+          },
+          {
+            "housing": "button-2-housing.png",
+            "front": "button-2-housing-front.png",
+            "cap": "button-2-cap-up.png",
+            "capDown": "button-2-cap-down.png",
+            "contact": [
+              1261.06,
+              690
+            ]
+          }
+        ],
+        "drawOrder": [
+          "housing",
+          "cap",
+          "housing-front"
+        ]
+      },
+      "bb": {
+        "file": "bb.png",
+        "canvas": [
+          64,
+          64
+        ],
+        "center": [
+          32,
+          32
+        ],
+        "opaqueRadius": 24,
+        "sceneRadius": 14,
+        "scale": 0.583333333333,
+        "registered": "bb-registered.png",
+        "registeredCenter": [
+          768,
+          512
+        ],
+        "registeredRadius": 14,
+        "opacity": 1,
+        "impactCenters": [
+          [
+            850,
+            676
+          ],
+          [
+            1052.8,
+            676
+          ],
+          [
+            1261.06,
+            676
+          ]
+        ],
+        "pressedCenters": [
+          [
+            850,
+            698.95
+          ],
+          [
+            1052.8,
+            698.95
+          ],
+          [
+            1261.06,
+            698.95
+          ]
+        ],
+        "exitCenters": [
+          [
+            728,
+            1100
+          ],
+          [
+            1052.8,
+            1100
+          ],
+          [
+            1408,
+            1100
+          ]
+        ],
+        "maxForegroundScale": 1.55,
+        "fullyOffscreenCenterY": 1047
+      },
+      "drawOrder": [
+        "background",
+        "gates",
+        "button housings",
+        "button caps",
+        "button housing fronts",
+        "BBs",
+        "kiwi body",
+        "cord",
+        "kiwi head-neck"
+      ],
+      "suggestedTimingMs": {
+        "tug": [
+          0,
+          500
+        ],
+        "gatesOpen": [
+          300,
+          1620
+        ],
+        "release": [
+          500,
+          560,
+          620
+        ],
+        "fallDuration": 650,
+        "pressDuration": 160,
+        "rollDuration": 1800,
+        "lastExit": 4230,
+        "restUntil": 4600,
+        "showerDuration": 1200,
+        "releaseInterval": 200
+      },
+      "assembled": {
+        "idle": "assembled-idle.png",
+        "tug": "assembled-tug.png",
+        "impact": "assembled-impact.png"
+      },
+      "notes": [
+        "All layers except compact bb.png are full-canvas 1536\u00d71024 registered images.",
+        "Use uniform scaling and a fixed viewBox; no independently resized states.",
+        "Never fade BBs; hide/reset only after their full circle is beyond canvas bottom.",
+        "No game files, global manifest or renderer are changed by this pack."
+      ],
+      "layers": [
+        "background",
+        "kiwi-body",
+        "kiwi-head-neck",
+        "gate-0",
+        "gate-1",
+        "gate-2",
+        "bb"
+      ]
+    }
+  }
+}

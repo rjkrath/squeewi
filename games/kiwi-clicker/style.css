@@ -1,10 +1,10 @@
 /* Game-specific illustration: all moving parts share one coordinate system. */
-.kiwi-scene{display:block;width:100%;max-width:480px;margin:8px auto 18px;padding:0 0 12px;border:0;border-radius:24px;background:transparent;color:#874831;cursor:pointer;touch-action:manipulation}
+.kiwi-scene{display:block;width:100%;max-width:480px;margin:32px auto 18px;padding:0 0 12px;border:0;border-radius:24px;background:transparent;color:#874831;cursor:pointer;touch-action:manipulation}
 .kiwi-scene svg{display:block;width:100%;overflow:visible}
-.scene-caption{display:inline-block;font-size:15px;font-weight:800;letter-spacing:.3px;padding:9px 20px;background:#fff7dd;border:1px solid #b59b6c40;border-radius:30px}
+.scene-caption{display:inline-block;margin-top:20px;font-size:15px;font-weight:800;letter-spacing:.3px;padding:9px 20px;background:#fff7dd;border:1px solid #b59b6c40;border-radius:30px}
 .kiwi-scene:hover .scene-caption{background:#ffeac5}
 .kiwi-deformed{display:none;pointer-events:none}
-#kiwi-canvas{display:block;width:1536px;height:1024px}
+#kiwi-canvas{display:block;width:1536px;height:1200px}
 .kiwi-fallback{display:block}
 .motion-ready .kiwi-deformed{display:block}
 .motion-ready .kiwi-fallback{display:none}
@@ -23,8 +23,124 @@
 @keyframes factory-puff{0%{opacity:0;transform:translateY(8px)}30%{opacity:.7}100%{opacity:0;transform:translateY(-20px)}}
 @media(prefers-reduced-motion:reduce){.workplace *{animation:none!important}}
 
-#intern-canvas{display:block;width:1536px;height:1024px}
+#intern-canvas{display:block;width:1536px;height:1200px}
 
 .extra-tools{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:14px}.tool-badge{font-size:11px;padding:7px 10px;border-radius:12px;background:#f7f5e7;border:1px solid #b6c19d60}
 
 .worm-farm{margin-top:12px;padding:12px;border-radius:14px;background:#d9dfbe;border-bottom:10px solid #8c7052;text-align:center}.worm-farm>b,.worm-farm>small{display:block;font-size:11px;margin-top:5px}.worm-farm>span{letter-spacing:8px;font-size:20px}
+
+.mechanism{position:relative;height:110px}.mechanism img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.mechanism-pressed{opacity:0;animation:mechanical-down 1.3s steps(1,end) infinite}.mechanism-idle{animation:mechanical-up 1.3s steps(1,end) infinite}
+.factory-mechanism img{animation-duration:1.8s}
+@keyframes mechanical-down{0%,35%,75%,100%{opacity:0}45%,65%{opacity:1}}
+@keyframes mechanical-up{0%,35%,75%,100%{opacity:1}45%,65%{opacity:0}}
+.flock-card{flex-basis:100%}#flock-row{position:relative;aspect-ratio:2;overflow:hidden;background:radial-gradient(ellipse at 50% 10%,#fffdf3 0%,transparent 65%)}#flock-row svg{position:absolute;height:auto}
+.tool-badge:has(img){display:flex;align-items:center;gap:8px}.tool-badge img{width:85px;height:60px;object-fit:contain}
+.worm-farm{border-bottom:0;background:#f7f5e7}.worm-farm img{display:block;width:100%;height:115px;object-fit:contain}
+@media(prefers-reduced-motion:reduce){.mechanism img{animation:none}.mechanism-pressed{display:none}}
+
+.clockwork-mechanism img{animation-duration:1s}
+.snack-tin{margin-top:12px;padding:12px}.snack-tin>img{display:block;width:100%;height:115px;object-fit:contain}
+
+#pecks-dialog input{display:block;width:100%;box-sizing:border-box;margin:8px 0 20px;padding:12px;border:1px solid #b6c19d;border-radius:10px;font:inherit}
+
+.cheat-toolbar{display:flex;justify-content:flex-end;margin:0 0 12px}
+
+.unpictured-upgrades{margin-top:12px;padding:12px}.unpictured-upgrades>b{font-size:14px}
+
+#factory-scene{flex-basis:100%}.factory-line{display:flex;gap:0}.factory-line .factory-mechanism{flex:1;min-width:0;height:auto;aspect-ratio:1.4}.factory-line .factory-mechanism:nth-child(2) img{animation-delay:-.6s}.factory-line .factory-mechanism:nth-child(3) img{animation-delay:-1.2s}
+
+.raster-presentation.motion-ready .kiwi-deformed{display:none}
+
+/* Let purchased scenes determine the stage height rather than the shop column. */
+.game-grid>.stage{align-self:start;padding-bottom:30px}
+
+#intern-scene,#clockwork-scene{flex-basis:100%}
+
+#shop{display:grid;grid-auto-rows:1fr;gap:12px}#shop>.upgrade{margin-bottom:0;min-height:110px}
+
+/* Purchased scenes share a frame and reserve matching room for their captions. */
+.stage .workplace-card,.stage .worm-farm{height:230px;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;padding:12px}
+.stage .workplace-card>svg,.stage .workplace-card>.mechanism,.stage .workplace-card>.factory-line,.stage .workplace-card>#flock-row,.stage .workplace-card>img,.stage .worm-farm>img{flex:1;min-height:0;height:170px;width:100%;margin-bottom:8px}
+.stage .workplace-card>svg{height:170px}
+#flock-row{aspect-ratio:auto}
+.factory-line .factory-mechanism{height:100%;aspect-ratio:auto}
+.stage .workplace-card>b,.stage .worm-farm>b{flex:none;font-size:11px}
+.stage .workplace-card>small,.stage .worm-farm>small{flex:none;font-size:10px;margin-top:5px}
+
+.stage{container-type:inline-size}
+.clockwork-mechanism img{left:50%;right:auto;width:var(--clockwork-art-width,180px);transform:translateX(-50%)}
+
+.game-grid>.stage{scroll-margin-top:20px}
+
+#workplace>#worm-farm{flex-basis:100%;margin-top:0}
+
+.workplace-card,.worm-farm{scroll-margin-top:20px}
+
+#clockwork-scene .clockwork-action-lines{position:absolute;inset:0 auto 0 50%;width:var(--clockwork-art-width,180px);height:100%;transform:translateX(-50%);pointer-events:none;opacity:0;animation:mechanical-down 1s steps(1,end) infinite}
+@media(prefers-reduced-motion:reduce){#clockwork-scene .clockwork-action-lines{display:none}}
+
+#workplace>#snack-tin{flex-basis:100%;margin-top:0}
+
+main{padding-top:10px}
+
+.locked-upgrade{justify-content:center;text-align:center;color:#6c765e;background:#ecefdc;border-style:dashed;font-size:14px}
+
+.late-upgrade-scene{flex-basis:100%}.late-upgrade-scene>img{object-fit:contain}
+
+.cheat-toolbar{gap:10px;flex-wrap:wrap}
+
+.stage .late-upgrade-scene>.upgrade-animation{display:block;flex:1;min-height:0;height:170px;width:100%;margin-bottom:8px;object-fit:contain}
+
+/* Native canvases share the SVG coordinate scale without image re-decoding. */
+.kiwi-motion-viewport{position:relative;display:block}
+.motion-output{position:absolute;left:0;top:0;height:auto;pointer-events:none}
+.kiwi-motion-viewport>svg{position:relative}
+.raster-presentation .kiwi-deformed{display:none}
+#flock-row>.kiwi-motion-viewport{position:absolute}
+#flock-row .kiwi-motion-viewport>svg{position:relative;width:100%;left:auto;top:auto;transform:none}
+
+.stage .workplace-card>.kiwi-motion-viewport{flex:1;min-height:0;height:170px;width:100%;margin-bottom:8px}
+.stage .workplace-card>.kiwi-motion-viewport>svg{display:block;width:100%;height:100%}
+
+.empire-goal{border:1px solid #d9dec9;border-radius:20px;padding:18px 22px;margin-bottom:24px;background:#fffdf4}.empire-goal h2{font-size:1.35rem;margin:10px 0 6px}.empire-goal p{margin:6px 0}.empire-goal ol{display:flex;flex-wrap:wrap;gap:8px 22px;padding:0;margin:0;list-style:none;counter-reset:stages}.empire-goal li{counter-increment:stages;color:#79816b;font-size:.85rem}.empire-goal li:before{content:counter(stages) '. '}.empire-goal li.reached{color:#244735}.empire-goal li[aria-current]{font-weight:bold}.empire-goal progress{width:100%;height:9px;accent-color:#8aaf55}.empire-finale{margin-top:24px;padding:20px;border:2px solid #b9c879;border-radius:20px;text-align:center}.empire-finale h2{margin:0}.empire-finale button{position:relative;display:block;width:min(100%,340px);aspect-ratio:1.5;margin:auto;background:none;border:0;color:#244735}.empire-finale button img{position:absolute;inset:0;width:100%;height:auto}.empire-finale button span{position:absolute;bottom:0;left:0;width:100%;font-weight:bold}.empire-finale button:disabled{opacity:1}.celebrate .finale-cap{animation:big-peck .9s ease-in-out}.celebrate{animation:empire-glow 1.3s ease-out}@keyframes big-peck{40%,65%{transform:translateY(9%)}}@keyframes empire-glow{50%{background:#fff5bd;box-shadow:0 0 28px #e7cb63}}@media(prefers-reduced-motion:reduce){.celebrate,.celebrate .finale-cap{animation:none}}
+
+.purchase-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:14px;max-width:calc(100vw - 32px);width:max-content;padding:12px 18px;background:#fffdf4;color:#244735;border:1px solid #b9c879;border-radius:16px;box-shadow:0 6px 24px #24473526}.purchase-toast[hidden]{display:none}.purchase-toast .reset{margin:0;white-space:nowrap}@media(max-width:500px){.purchase-toast{gap:8px;padding:10px 12px;font-size:.85rem;bottom:16px}}
+
+
+body{font-family:"Source Sans 3",sans-serif}
+
+.floating-pecks{position:fixed;top:12px;right:18px;z-index:15;padding:9px 15px;background:#faf7ebf5;border:1px solid #b9c879;border-radius:14px;color:#244735;box-shadow:0 3px 12px #24473515;font-variant-numeric:tabular-nums;pointer-events:none}.floating-pecks[hidden]{display:none}.floating-pecks span{font-weight:700}@media(max-width:500px){.floating-pecks{top:8px;right:10px;padding:7px 12px}}
+
+.empire-finale{position:relative;overflow:hidden}.finale-confetti{position:absolute;inset:0;pointer-events:none}.finale-confetti i{position:absolute;left:50%;top:42%;width:7px;height:11px;opacity:0;animation:confetti-burst 1.8s var(--delay) ease-out forwards}@keyframes confetti-burst{0%{opacity:1;transform:translate(0,0) rotate(0)}25%{opacity:1;transform:translate(calc(var(--x)*.6),-85px) rotate(calc(var(--spin)*.3))}80%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--spin))}}@media(prefers-reduced-motion:reduce){.finale-confetti{display:none}}
+
+.empire-finale button .finale-housing-front{clip-path:inset(56.640625% 0 0 0)}
+.empire-finale button .finale-button-art{position:absolute;inset:0;width:100%;height:auto}
+.screen-celebration{position:fixed;inset:0;z-index:1000;overflow:hidden;pointer-events:none;contain:strict}
+.celebration-confetti{position:absolute;top:-20px;width:10px;height:16px;opacity:0;animation:celebration-fall var(--duration) var(--delay) linear forwards}
+.celebration-spark{position:absolute;width:12px;height:36px;opacity:0;animation:celebration-firework 2.5s var(--delay) ease-out forwards}
+.celebration-firework-glow{position:absolute;width:36px;height:36px;margin:-18px;border-radius:50%;background:radial-gradient(circle,#fff3dc99,var(--spark-color) 30%,transparent 72%);opacity:0;animation:celebration-glow 1s var(--delay) ease-out forwards}
+.celebration-balloon-float{position:absolute;bottom:-160px;width:60px;height:120px;animation:celebration-rise 5s var(--delay) linear forwards}.celebration-balloon{display:block;width:60px;height:120px;object-fit:contain;transform-origin:50% 28.125%;animation:balloon-sway var(--sway-duration) var(--phase) ease-in-out infinite alternate}
+@keyframes celebration-fall{0%{opacity:1;transform:translate(0,0) rotate(0)}85%{opacity:1}100%{opacity:0;transform:translate(var(--drift),calc(100vh + 30px)) rotate(var(--spin))}}
+@keyframes celebration-firework{0%{opacity:1;transform:translate(0,0) rotate(var(--angle)) scale(.6)}35%{opacity:1;transform:translate(calc(var(--x)*.8),calc(var(--y)*.8)) rotate(var(--angle)) scale(1)}70%{opacity:.9}100%{opacity:0;transform:translate(var(--x),calc(var(--y) + 55px)) rotate(var(--angle)) scale(.5)}}
+@keyframes celebration-glow{0%{opacity:0;transform:scale(.2)}20%{opacity:.65}100%{opacity:0;transform:scale(2)}}
+@keyframes celebration-rise{0%{transform:translate(0,0)}100%{transform:translate(var(--drift),calc(-100vh - 230px))}}
+@media(prefers-reduced-motion:reduce){.screen-celebration{display:none}}
+
+@keyframes balloon-sway{from{transform:translateX(calc(var(--sway)*-1)) rotate(calc(var(--tilt)*-1))}to{transform:translateX(var(--sway)) rotate(var(--tilt))}}
+
+.game-grid>.empire-finale{grid-column:1 / -1;margin-top:0}
+/* Match the approved arcade presentation without changing illustration geometry. */
+body{--paper:#edf1e7;background:var(--paper)}
+.game-title h1,.upgrades h2,.upgrade h3,.empire-goal h2,.empire-finale h2,dialog h2{font-family:Georgia,serif;font-weight:400;letter-spacing:0}
+.stage,.workplace-card,.worm-farm,.upgrade,.empire-goal,.empire-finale{border:1px solid #23433325;border-radius:12px}
+.stage{background:#e7ecd9}
+.workplace-card,.worm-farm,.upgrade,.empire-goal,.empire-finale{background:#fffdf5}
+.stage .workplace-card>b,.stage .worm-farm>b{font-family:Georgia,serif;font-weight:400;font-size:14px}
+.upgrade p{font-size:14px}.upgrade h3{font-size:20px}
+.upgrade button,.scene-caption{border-radius:12px}
+.scene-caption{background:var(--green);color:#fffdf5;border:0;font-weight:600}.kiwi-scene:hover .scene-caption{background:#294c37}
+.locked-upgrade{border-style:dashed;background:#edf1e7}
+.purchase-toast{background:#fffdf5;border-color:#23433325;border-radius:12px}
+.floating-pecks{background:#edf1e7f5;border-color:#23433325;border-radius:12px}
+@media(max-width:700px){.upgrade{gap:12px}.upgrade>div{min-width:0}.upgrade button{flex-shrink:0}.empire-goal{padding:16px}.game-title h1{font-size:36px}}

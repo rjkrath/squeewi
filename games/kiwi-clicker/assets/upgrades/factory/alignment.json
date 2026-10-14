@@ -4,9 +4,10 @@
     1024
   ],
   "layerOrder": [
-    "presses",
     "frame",
-    "buttons"
+    "buttons",
+    "presses",
+    "frame sockets (clip y 0\u2013400)"
   ],
   "pressesTransform": "translate(0 20)",
   "pressCenters": [
@@ -36,7 +37,7 @@
   ],
   "pressTravelPx": [
     0,
-    51
+    57
   ],
   "buttonContacts": [
     [
@@ -57,14 +58,14 @@
     0,
     6
   ],
-  "timing": "Approach first ~42px, then pad/button move down 6px together; stagger each press by 160ms.",
+  "timing": "Approach 48/50/51px for left/middle/right head, then pad and button move down 6px together; stagger each press by 160ms.",
   "fallback": "assembled-idle.svg",
   "conceptFallback": "idle.png",
-  "occlusion": "Draw presses below frame so fixed sockets hide extended shafts.",
+  "occlusion": "Draw full frame first, buttons second, presses third, and only frame sockets clipped to y=0..400 last. Do not draw the full frame last: its conveyor would hide the button bases.",
   "pressTravelPxByHead": [
-    48,
-    50,
-    51
+    54,
+    56,
+    57
   ],
   "registeredPNGNote": "Use *-registered.png at identity placement, or raw source PNGs with the documented transforms. Do not apply transforms twice.",
   "registeredFallback": "assembled-idle.png"
